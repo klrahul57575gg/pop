@@ -1172,13 +1172,13 @@
                           (0, a.jsx)("ul", {
                             className: "space-y-3",
                             children: [
-                              { label: "Home", href: "../index.html" },
-                              { label: "About", href: "../index.html#about" },
+                              { label: "Home", href: "./index.html" },
+                              { label: "About", href: "./index.html#about" },
                               {
                                 label: "Become a Tutor",
-                                href: "../index.html#become-tutor",
+                                href: "./index.html#become-tutor",
                               },
-                              { label: "Pricing", href: "../pricing/" },
+                              { label: "Pricing", href: "./pricing/" },
                             ].map((e) =>
                               (0, a.jsx)(
                                 "li",
@@ -1303,7 +1303,7 @@
                               }),
                               (0, a.jsx)("li", {
                                 children: (0, a.jsx)(r(), {
-                                  href: "../contact/",
+                                  href: "./contact/",
                                   className:
                                     "text-sm text-muted-foreground hover:text-primary transition-colors font-medium",
                                   children: "Contact Page",
