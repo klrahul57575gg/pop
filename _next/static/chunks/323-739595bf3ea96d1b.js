@@ -200,7 +200,7 @@
                   "max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between",
                 children: [
                   (0, a.jsxs)(o(), {
-                    href: "index.html",
+                    href: i.C.navigation[0].href,
                     className: "flex items-center gap-2 group",
                     children: [
                       (0, a.jsx)(l.A, {
@@ -554,8 +554,16 @@
       let l = o;
     },
     5904: (e, t, s) => {
-      s.d(t, { C: () => a });
-      let a = {
+    s.d(t, { C: () => a });
+
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+    const basePath =
+        window.location.hostname.endsWith(".github.io") && pathParts.length
+            ? "/" + pathParts[0]
+            : "";
+
+    let a = {
         name: "Thrive Nest Education",
         shortName: "ThrivenEst",
         tagline: "Personalized Home Tuition for Better Results",
@@ -585,14 +593,14 @@
           successRate: "95%",
         },
         navigation: [
-          { label: "Home", href: "./index.html" },
-          { label: "About", href: "./index.html#about" },
-          { label: "Become a Tutor", href: "./index.html#become-tutor" },
-          { label: "Subjects", href: "./index.html#subjects" },
-          { label: "Pricing", href: "./pricing/" },
-          { label: "Testimonials", href: "./index.html#testimonials" },
-          { label: "Contact", href: "./contact/" },
-        ],
+         { label: "Home", href: `${basePath}/index.html` },
+         { label: "About", href: `${basePath}/index.html#about` },
+         { label: "Become a Tutor", href: `${basePath}/index.html#become-tutor` },
+         { label: "Subjects", href: `${basePath}/index.html#subjects` },
+         { label: "Pricing", href: `${basePath}/pricing/` },
+         { label: "Testimonials", href: `${basePath}/index.html#testimonials` },
+         { label: "Contact", href: `${basePath}/contact/` },
+         ],
       };
     },
     7356: (e, t, s) => {
@@ -1172,14 +1180,14 @@
                           (0, a.jsx)("ul", {
                             className: "space-y-3",
                             children: [
-                              { label: "Home", href: "./index.html" },
-                              { label: "About", href: "./index.html#about" },
+                              { label: "Home", href: i.C.navigation[0].href },
+                              { label: "About", href: i.C.navigation[1].href },
                               {
                                 label: "Become a Tutor",
-                                href: "./index.html#become-tutor",
+                                href: i.C.navigation[2].href,
                               },
-                              { label: "Pricing", href: "./pricing/" },
-                            ].map((e) =>
+                              { label: "Pricing", href: i.C.navigation[4].href },
+                              ].map((e) =>
                               (0, a.jsx)(
                                 "li",
                                 {
@@ -1303,7 +1311,7 @@
                               }),
                               (0, a.jsx)("li", {
                                 children: (0, a.jsx)(r(), {
-                                  href: "./contact/",
+                                  href: i.C.navigation[6].href,
                                   className:
                                     "text-sm text-muted-foreground hover:text-primary transition-colors font-medium",
                                   children: "Contact Page",
